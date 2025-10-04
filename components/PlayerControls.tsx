@@ -1,17 +1,11 @@
 import React from 'react';
-import { PlayIcon, PauseIcon, NextIcon, PrevIcon, ShuffleIcon, RepeatIcon, RepeatOneIcon, StopIcon, RewindIcon, FastForwardIcon } from './icons';
-
-type RepeatMode = 'none' | 'one' | 'all';
+import { PlayIcon, PauseIcon, NextIcon, PrevIcon, StopIcon, RewindIcon, FastForwardIcon } from './icons';
 
 interface PlayerControlsProps {
   isPlaying: boolean;
-  isShuffleActive: boolean;
-  repeatMode: RepeatMode;
   onPlayPause: () => void;
   onNext: () => void;
   onPrev: () => void;
-  onShuffle: () => void;
-  onRepeat: () => void;
   onStop: () => void;
   onRewind: () => void;
   onFastForward: () => void;
@@ -22,13 +16,9 @@ interface PlayerControlsProps {
 
 const PlayerControls: React.FC<PlayerControlsProps> = ({
   isPlaying,
-  isShuffleActive,
-  repeatMode,
   onPlayPause,
   onNext,
   onPrev,
-  onShuffle,
-  onRepeat,
   onStop,
   onRewind,
   onFastForward,
@@ -36,19 +26,9 @@ const PlayerControls: React.FC<PlayerControlsProps> = ({
   isNextDisabled,
   isPlaybackDisabled,
 }) => {
-  const RepeatButtonIcon = repeatMode === 'one' ? RepeatOneIcon : RepeatIcon;
-  const repeatTitle = `Repeat: ${repeatMode.charAt(0).toUpperCase() + repeatMode.slice(1)}`;
 
   return (
-    <div className="flex items-center justify-center space-x-2 md:space-x-3">
-      <button
-        onClick={onShuffle}
-        className={`${isShuffleActive ? 'text-sky-500' : 'text-slate-400'} hover:text-white transition-colors duration-200`}
-        aria-label="Shuffle"
-        title={isShuffleActive ? 'Disable Shuffle' : 'Enable Shuffle'}
-      >
-        <ShuffleIcon className="w-6 h-6" />
-      </button>
+    <div className="flex items-center justify-center space-x-2 md:space-x-3 flex-shrink-0">
       <button
         onClick={onRewind}
         disabled={isPlaybackDisabled}
@@ -101,14 +81,6 @@ const PlayerControls: React.FC<PlayerControlsProps> = ({
         title="Fast Forward 10s"
       >
         <FastForwardIcon className="w-6 h-6" />
-      </button>
-      <button
-        onClick={onRepeat}
-        className={`${repeatMode !== 'none' ? 'text-sky-500' : 'text-slate-400'} hover:text-white transition-colors duration-200`}
-        aria-label="Repeat"
-        title={repeatTitle}
-      >
-        <RepeatButtonIcon className="w-6 h-6" />
       </button>
     </div>
   );

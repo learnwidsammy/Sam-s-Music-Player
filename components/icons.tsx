@@ -77,3 +77,45 @@ export const RewindIcon: React.FC<{ className?: string }> = ({ className }) => (
         <path d="M11 18V6l-8.5 6 8.5 6zm-1.5-6l8.5 6V6l-8.5 6z" />
     </svg>
 );
+
+export const SearchIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+  </svg>
+);
+
+export const AddIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+  </svg>
+);
+
+export const SpinnerIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+  </svg>
+);
+
+export const VisualizerIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 15h2V9H3v6zm4 2h2V7H7v10zm4-4h2v-2h-2v2zm4 2h2V7h-2v10zm4-5h2V9h-2v3z" />
+    </svg>
+);
+
+export const EqualizerIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 20h4V4h-4v16zm-6 0h4v-8H4v8zM16 9v11h4V9h-4z" />
+    </svg>
+);
+
+export const LyricsIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15 5H4v2h11V5zm0 4H4v2h11V9zm0 4H4v2h11v-2zM4 17h7v-2H4v2zm15-1.5c0-1.25-.75-2.3-1.75-2.75V3h-2.5v10.25c-1 .45-1.75 1.5-1.75 2.75s.75 2.3 1.75 2.75V21h2.5V18.25c1-.45 1.75-1.5 1.75-2.75z" />
+    </svg>
+);
+
+export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+    </svg>
+);

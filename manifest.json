@@ -1,0 +1,21 @@
+{
+  "short_name": "Music Player",
+  "name": "React Music Player",
+  "description": "A PWA music player that streams from YouTube and plays local files.",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0ea5e9",
+  "background_color": "#0f172a"
+}
