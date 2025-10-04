@@ -1,0 +1,5 @@
+{
+  "name": "Sam's Music Player",
+  "description": "A simple music player built with React and Tailwind CSS that plays audio files from your local device. Add songs from your computer and enjoy seamless playback.",
+  "requestFramePermissions": []
+}
